@@ -1,0 +1,3 @@
+/home/karthik/Desktop/Nivetti Internship/MaliciousFileDetection/build/CMakeFiles/Tutorial-HelloWorld.dir
+/home/karthik/Desktop/Nivetti Internship/MaliciousFileDetection/build/CMakeFiles/edit_cache.dir
+/home/karthik/Desktop/Nivetti Internship/MaliciousFileDetection/build/CMakeFiles/rebuild_cache.dir
