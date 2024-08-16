@@ -17,4 +17,4 @@ def download_file(filename):
         abort(404)
     
 if(__name__ == '__main__'):
-    app.run(debug=True)
+    app.run(host="10.0.2.15",port=5000, debug=True)

@@ -1,3 +1,0 @@
-/home/karthik/Desktop/Nivetti Internship/MaliciousFileDetection/PacketParsing/build/CMakeFiles/PacketParsing.dir
-/home/karthik/Desktop/Nivetti Internship/MaliciousFileDetection/PacketParsing/build/CMakeFiles/edit_cache.dir
-/home/karthik/Desktop/Nivetti Internship/MaliciousFileDetection/PacketParsing/build/CMakeFiles/rebuild_cache.dir
