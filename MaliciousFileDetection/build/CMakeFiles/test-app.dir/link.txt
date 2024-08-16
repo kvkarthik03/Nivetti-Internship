@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/test-app.dir/detectMalware_15Aug2024.cpp.o -o ../test-app  /usr/local/lib/libPcap++.a /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so /usr/lib/x86_64-linux-gnu/libcurl.so /usr/local/lib/libPacket++.a /usr/local/lib/libCommon++.a /usr/lib/x86_64-linux-gnu/libpcap.so 

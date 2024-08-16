@@ -81,7 +81,7 @@ int main(int argc, char *argv[])
 {
     // use the IFileReaderDevice interface to automatically identify file type (pcap/pcap-ng)
     // and create an interface instance that both readers implement
-    pcpp::IFileReaderDevice *reader = pcpp::IFileReaderDevice::getReader("1_http_packet.pcap");
+    pcpp::IFileReaderDevice *reader = pcpp::IFileReaderDevice::getReader("/home/karthik/Desktop/Nivetti Internship/pcaplusplus_trial/1_http_packet.pcap");
 
     // verify that a reader interface was indeed created
     if (reader == nullptr)
@@ -121,59 +121,59 @@ int main(int argc, char *argv[])
                 << std::endl;
         }
 
-        // now let's get the Ethernet layer
-        pcpp::EthLayer *ethernetLayer = parsedPacket.getLayerOfType<pcpp::EthLayer>();
-        if (ethernetLayer != nullptr)
-        {
-            //std::cerr << "Something went wrong, couldn't find Ethernet layer" << std::endl;
-            //return 1;
+        // // now let's get the Ethernet layer
+        // pcpp::EthLayer *ethernetLayer = parsedPacket.getLayerOfType<pcpp::EthLayer>();
+        // if (ethernetLayer != nullptr)
+        // {
+        //     //std::cerr << "Something went wrong, couldn't find Ethernet layer" << std::endl;
+        //     //return 1;
         
 
-        // print the source and dest MAC addresses and the Ether type
-        std::cout << std::endl
-                  << "Source MAC address: " << ethernetLayer->getSourceMac() << std::endl
-                  << "Destination MAC address: " << ethernetLayer->getDestMac() << std::endl
-                  << "Ether type = 0x" << std::hex << pcpp::netToHost16(ethernetLayer->getEthHeader()->etherType) << std::endl;
-        }
+        // // print the source and dest MAC addresses and the Ether type
+        // std::cout << std::endl
+        //           << "Source MAC address: " << ethernetLayer->getSourceMac() << std::endl
+        //           << "Destination MAC address: " << ethernetLayer->getDestMac() << std::endl
+        //           << "Ether type = 0x" << std::hex << pcpp::netToHost16(ethernetLayer->getEthHeader()->etherType) << std::endl;
+        // }
 
-        // let's get the IPv4 layer
-        pcpp::IPv4Layer *ipLayer = parsedPacket.getLayerOfType<pcpp::IPv4Layer>();
-        if (ipLayer != nullptr)
-        {
-            //std::cerr << "Something went wrong, couldn't find IPv4 layer" << std::endl;
-            //return 1;
+        // // let's get the IPv4 layer
+        // pcpp::IPv4Layer *ipLayer = parsedPacket.getLayerOfType<pcpp::IPv4Layer>();
+        // if (ipLayer != nullptr)
+        // {
+        //     //std::cerr << "Something went wrong, couldn't find IPv4 layer" << std::endl;
+        //     //return 1;
         
 
-        // print source and dest IP addresses, IP ID and TTL
-        std::cout << std::endl
-                  << "Source IP address: " << ipLayer->getSrcIPAddress() << std::endl
-                  << "Destination IP address: " << ipLayer->getDstIPAddress() << std::endl
-                  << "IP ID: 0x" << std::hex << pcpp::netToHost16(ipLayer->getIPv4Header()->ipId) << std::endl
-                  << "TTL: " << std::dec << (int)ipLayer->getIPv4Header()->timeToLive << std::endl;
-        }
+        // // print source and dest IP addresses, IP ID and TTL
+        // std::cout << std::endl
+        //           << "Source IP address: " << ipLayer->getSrcIPAddress() << std::endl
+        //           << "Destination IP address: " << ipLayer->getDstIPAddress() << std::endl
+        //           << "IP ID: 0x" << std::hex << pcpp::netToHost16(ipLayer->getIPv4Header()->ipId) << std::endl
+        //           << "TTL: " << std::dec << (int)ipLayer->getIPv4Header()->timeToLive << std::endl;
+        // }
 
-        // let's get the TCP layer
-        pcpp::TcpLayer *tcpLayer = parsedPacket.getLayerOfType<pcpp::TcpLayer>();
-        if (tcpLayer != nullptr)
-        {
-            //std::cerr << "Something went wrong, couldn't find TCP layer" << std::endl;
-            //return 1;
+        // // let's get the TCP layer
+        // pcpp::TcpLayer *tcpLayer = parsedPacket.getLayerOfType<pcpp::TcpLayer>();
+        // if (tcpLayer != nullptr)
+        // {
+        //     //std::cerr << "Something went wrong, couldn't find TCP layer" << std::endl;
+        //     //return 1;
         
 
-        // print TCP source and dest ports, window size, and the TCP flags that are set in this layer
-        std::cout << std::endl
-                  << "Source TCP port: " << tcpLayer->getSrcPort() << std::endl
-                  << "Destination TCP port: " << tcpLayer->getDstPort() << std::endl
-                  << "Window size: " << pcpp::netToHost16(tcpLayer->getTcpHeader()->windowSize) << std::endl
-                  << "TCP flags: " << printTcpFlags(tcpLayer) << std::endl;
+        // // print TCP source and dest ports, window size, and the TCP flags that are set in this layer
+        // std::cout << std::endl
+        //           << "Source TCP port: " << tcpLayer->getSrcPort() << std::endl
+        //           << "Destination TCP port: " << tcpLayer->getDstPort() << std::endl
+        //           << "Window size: " << pcpp::netToHost16(tcpLayer->getTcpHeader()->windowSize) << std::endl
+        //           << "TCP flags: " << printTcpFlags(tcpLayer) << std::endl;
 
-        std::cout << "TCP options: ";
-        for (pcpp::TcpOption tcpOption = tcpLayer->getFirstTcpOption(); tcpOption.isNotNull(); tcpOption = tcpLayer->getNextTcpOption(tcpOption))
-        {
-            std::cout << printTcpOptionType(tcpOption.getTcpOptionType()) << " ";
-        }
-        std::cout << std::endl;
-        }
+        // std::cout << "TCP options: ";
+        // for (pcpp::TcpOption tcpOption = tcpLayer->getFirstTcpOption(); tcpOption.isNotNull(); tcpOption = tcpLayer->getNextTcpOption(tcpOption))
+        // {
+        //     std::cout << printTcpOptionType(tcpOption.getTcpOptionType()) << " ";
+        // }
+        // std::cout << std::endl;
+        // }
 
         // let's get the HTTP request layer
         pcpp::HttpRequestLayer *httpRequestLayer = parsedPacket.getLayerOfType<pcpp::HttpRequestLayer>();

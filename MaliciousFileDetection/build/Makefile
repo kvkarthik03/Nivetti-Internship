@@ -117,41 +117,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Tutorial-HelloWorld
+# Target rules for targets named test-app
 
 # Build rule for target.
-Tutorial-HelloWorld: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tutorial-HelloWorld
-.PHONY : Tutorial-HelloWorld
+test-app: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test-app
+.PHONY : test-app
 
 # fast build rule for target.
-Tutorial-HelloWorld/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tutorial-HelloWorld.dir/build.make CMakeFiles/Tutorial-HelloWorld.dir/build
-.PHONY : Tutorial-HelloWorld/fast
+test-app/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test-app.dir/build.make CMakeFiles/test-app.dir/build
+.PHONY : test-app/fast
 
-test2.o: test2.cpp.o
-.PHONY : test2.o
+detectMalware_15Aug2024.o: detectMalware_15Aug2024.cpp.o
+.PHONY : detectMalware_15Aug2024.o
 
 # target to build an object file
-test2.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tutorial-HelloWorld.dir/build.make CMakeFiles/Tutorial-HelloWorld.dir/test2.cpp.o
-.PHONY : test2.cpp.o
+detectMalware_15Aug2024.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test-app.dir/build.make CMakeFiles/test-app.dir/detectMalware_15Aug2024.cpp.o
+.PHONY : detectMalware_15Aug2024.cpp.o
 
-test2.i: test2.cpp.i
-.PHONY : test2.i
+detectMalware_15Aug2024.i: detectMalware_15Aug2024.cpp.i
+.PHONY : detectMalware_15Aug2024.i
 
 # target to preprocess a source file
-test2.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tutorial-HelloWorld.dir/build.make CMakeFiles/Tutorial-HelloWorld.dir/test2.cpp.i
-.PHONY : test2.cpp.i
+detectMalware_15Aug2024.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test-app.dir/build.make CMakeFiles/test-app.dir/detectMalware_15Aug2024.cpp.i
+.PHONY : detectMalware_15Aug2024.cpp.i
 
-test2.s: test2.cpp.s
-.PHONY : test2.s
+detectMalware_15Aug2024.s: detectMalware_15Aug2024.cpp.s
+.PHONY : detectMalware_15Aug2024.s
 
 # target to generate assembly for a file
-test2.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tutorial-HelloWorld.dir/build.make CMakeFiles/Tutorial-HelloWorld.dir/test2.cpp.s
-.PHONY : test2.cpp.s
+detectMalware_15Aug2024.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test-app.dir/build.make CMakeFiles/test-app.dir/detectMalware_15Aug2024.cpp.s
+.PHONY : detectMalware_15Aug2024.cpp.s
 
 # Help Target
 help:
@@ -161,10 +161,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Tutorial-HelloWorld"
-	@echo "... test2.o"
-	@echo "... test2.i"
-	@echo "... test2.s"
+	@echo "... test-app"
+	@echo "... detectMalware_15Aug2024.o"
+	@echo "... detectMalware_15Aug2024.i"
+	@echo "... detectMalware_15Aug2024.s"
 .PHONY : help
 
 

@@ -1,0 +1,14 @@
+# Target labels
+ json-populate
+# Source files and their labels
+/home/karthik/Desktop/Nivetti Internship/MaliciousFileDetection/build/_deps/json-subbuild/CMakeFiles/json-populate
+/home/karthik/Desktop/Nivetti Internship/MaliciousFileDetection/build/_deps/json-subbuild/CMakeFiles/json-populate.rule
+/home/karthik/Desktop/Nivetti Internship/MaliciousFileDetection/build/_deps/json-subbuild/CMakeFiles/json-populate-complete.rule
+/home/karthik/Desktop/Nivetti Internship/MaliciousFileDetection/build/_deps/json-subbuild/json-populate-prefix/src/json-populate-stamp/json-populate-build.rule
+/home/karthik/Desktop/Nivetti Internship/MaliciousFileDetection/build/_deps/json-subbuild/json-populate-prefix/src/json-populate-stamp/json-populate-configure.rule
+/home/karthik/Desktop/Nivetti Internship/MaliciousFileDetection/build/_deps/json-subbuild/json-populate-prefix/src/json-populate-stamp/json-populate-download.rule
+/home/karthik/Desktop/Nivetti Internship/MaliciousFileDetection/build/_deps/json-subbuild/json-populate-prefix/src/json-populate-stamp/json-populate-install.rule
+/home/karthik/Desktop/Nivetti Internship/MaliciousFileDetection/build/_deps/json-subbuild/json-populate-prefix/src/json-populate-stamp/json-populate-mkdir.rule
+/home/karthik/Desktop/Nivetti Internship/MaliciousFileDetection/build/_deps/json-subbuild/json-populate-prefix/src/json-populate-stamp/json-populate-patch.rule
+/home/karthik/Desktop/Nivetti Internship/MaliciousFileDetection/build/_deps/json-subbuild/json-populate-prefix/src/json-populate-stamp/json-populate-test.rule
+/home/karthik/Desktop/Nivetti Internship/MaliciousFileDetection/build/_deps/json-subbuild/json-populate-prefix/src/json-populate-stamp/json-populate-update.rule

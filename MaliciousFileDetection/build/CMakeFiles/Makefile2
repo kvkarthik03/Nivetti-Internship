@@ -63,42 +63,59 @@ CMAKE_BINARY_DIR = "/home/karthik/Desktop/Nivetti Internship/MaliciousFileDetect
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/Tutorial-HelloWorld.dir/all
+all: CMakeFiles/test-app.dir/all
+all: _deps/json-build/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: _deps/json-build/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/Tutorial-HelloWorld.dir/clean
+clean: CMakeFiles/test-app.dir/clean
+clean: _deps/json-build/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/Tutorial-HelloWorld.dir
+# Directory level rules for directory _deps/json-build
+
+# Recursive "all" directory target.
+_deps/json-build/all:
+.PHONY : _deps/json-build/all
+
+# Recursive "preinstall" directory target.
+_deps/json-build/preinstall:
+.PHONY : _deps/json-build/preinstall
+
+# Recursive "clean" directory target.
+_deps/json-build/clean:
+.PHONY : _deps/json-build/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test-app.dir
 
 # All Build rule for target.
-CMakeFiles/Tutorial-HelloWorld.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tutorial-HelloWorld.dir/build.make CMakeFiles/Tutorial-HelloWorld.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tutorial-HelloWorld.dir/build.make CMakeFiles/Tutorial-HelloWorld.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/karthik/Desktop/Nivetti Internship/MaliciousFileDetection/build/CMakeFiles" --progress-num=1,2 "Built target Tutorial-HelloWorld"
-.PHONY : CMakeFiles/Tutorial-HelloWorld.dir/all
+CMakeFiles/test-app.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test-app.dir/build.make CMakeFiles/test-app.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test-app.dir/build.make CMakeFiles/test-app.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/karthik/Desktop/Nivetti Internship/MaliciousFileDetection/build/CMakeFiles" --progress-num=1,2 "Built target test-app"
+.PHONY : CMakeFiles/test-app.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/Tutorial-HelloWorld.dir/rule: cmake_check_build_system
+CMakeFiles/test-app.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start "/home/karthik/Desktop/Nivetti Internship/MaliciousFileDetection/build/CMakeFiles" 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Tutorial-HelloWorld.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test-app.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/home/karthik/Desktop/Nivetti Internship/MaliciousFileDetection/build/CMakeFiles" 0
-.PHONY : CMakeFiles/Tutorial-HelloWorld.dir/rule
+.PHONY : CMakeFiles/test-app.dir/rule
 
 # Convenience name for target.
-Tutorial-HelloWorld: CMakeFiles/Tutorial-HelloWorld.dir/rule
-.PHONY : Tutorial-HelloWorld
+test-app: CMakeFiles/test-app.dir/rule
+.PHONY : test-app
 
 # clean rule for target.
-CMakeFiles/Tutorial-HelloWorld.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tutorial-HelloWorld.dir/build.make CMakeFiles/Tutorial-HelloWorld.dir/clean
-.PHONY : CMakeFiles/Tutorial-HelloWorld.dir/clean
+CMakeFiles/test-app.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test-app.dir/build.make CMakeFiles/test-app.dir/clean
+.PHONY : CMakeFiles/test-app.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
